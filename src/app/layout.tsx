@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body
           className={`${geistSans.variable} ${barlowFont.variable} ${geistMono.variable} `}
         >
@@ -41,6 +41,7 @@ export default function RootLayout({
             attribute="class"
             defaultTheme="light"
             enableSystem
+            forcedTheme={undefined}
             disableTransitionOnChange
           >
             {children}
